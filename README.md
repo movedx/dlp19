@@ -14,7 +14,7 @@ Forking this project will create a copy of the existing materials in this reposi
 
 1. Please sign in to [https://git.uni-konstanz.de/](https://git.uni-konstanz.de/)
 	 using your Shibboleth / Uni KN account
-2. Fork this project: FIXME: [https://git.uni-konstanz.de/oliver.wiedemann/dlp/forks/new](https://git.uni-konstanz.de/oliver.wiedemann/dlp/forks/new).
+2. Fork this project: [https://git.uni-konstanz.de/hanhe.lin/dlp19/forks/new](https://git.uni-konstanz.de/hanhe.lin/dlp19/forks/new).
 	 Please go to your project page now.
 3. Setup the correct permissions:
 	- Set your fork to `Private`: Settings -> General -> Permissions -> Project visibility
@@ -36,7 +36,7 @@ git clone git@git.uni-konstanz.de:FIRST.LAST/dlp.git
 We will regularly update the `dlp` repository throughout the semester.
 Please add it as a remote repository to keep track of the changes:
 ```shell
-FIXME: git remote -add -f tutorial git@git.uni-konstanz.de:oliver.wiedemann/dlp.git
+git remote -add -f tutorial git@git.uni-konstanz.de:hanhe.lin/dlp19.git
 ```
 you can check that you have two remote repositories by running:
 ```shell
@@ -46,8 +46,8 @@ the output should list a fetch and a push URL for each repository:
 ```shell
 origin	 git@git.uni-konstanz.de:FIRST.LAST/dlp.git (fetch)
 origin	 git@git.uni-konstanz.de:FIRST.LAST/dlp.git (push)
-FIXME: tutorial git@git.uni-konstanz.de:oliver.wiedemann/dlp.git (fetch)
-FIXME: tutorial git@git.uni-konstanz.de:oliver.wiedemann/dlp.git (push)
+tutorial git@git.uni-konstanz.de:hanhe.lin/dlp19.git (fetch)
+tutorial git@git.uni-konstanz.de:hanhe.lin/dlp19.git (push)
 ```
 
 ## Merging
