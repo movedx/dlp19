@@ -36,7 +36,7 @@ git clone git@git.uni-konstanz.de:FIRST.LAST/dlp.git
 We will regularly update the `dlp` repository throughout the semester.
 Please add it as a remote repository to keep track of the changes:
 ```shell
-git remote -add -f tutorial git@git.uni-konstanz.de:hanhe.lin/dlp19.git
+git remote add -f tutorial git@git.uni-konstanz.de:hanhe.lin/dlp19.git
 ```
 you can check that you have two remote repositories by running:
 ```shell
