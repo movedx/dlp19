@@ -73,12 +73,16 @@ class ThreeLayerNet(object):
         scores = None
         #############################################################################
         # TASK 1
-        # TODO: Perform the forward pass, computing the class scores for the input. #
+        # Perform the forward pass, computing the class scores for the input. #
         # Store the result in the scores variable, which should be an array of      #
         # shape (N, C).                                                             #
         #############################################################################
-     
-    
+
+        Z2 = np.dot(X, W1) + b1
+        A2 = np.maximum(Z2, 0)
+
+        scores = np.dot(A2, W2) + b2
+
         #############################################################################
         #                              END OF YOUR CODE                             #
         #############################################################################
@@ -99,8 +103,15 @@ class ThreeLayerNet(object):
         # classifier loss.                                                          #
         #############################################################################
 
-        
-        
+        scores -= np.max(scores, axis=1, keepdims=True)
+
+        p = np.exp(scores) / np.sum(np.exp(scores), axis=1, keepdims=True)
+
+        loss = - np.sum(np.log(p[range(N), y]))
+
+        loss /= N
+        loss += reg * (np.sum(W1 * W1) + np.sum(W2 * W2) + sum(b1 * b1) + sum(b2 * b2))
+
         #############################################################################
         #                              END OF YOUR CODE                             #
         #############################################################################
@@ -114,6 +125,16 @@ class ThreeLayerNet(object):
         # grads['W1'] should store the gradient on W1, and be a matrix of same size #
         #############################################################################
 
+        true_i = np.zeros(p.shape)
+        true_i[range(N), y] = 1
+        ds = (p - true_i) / N
+
+        grads['W2'] = np.dot(A2.T, ds) + reg * 2 * W2
+        grads['b2'] = ds.sum(axis=0)
+        dA2 = np.dot(ds, W2.T)
+        dZ2 = dA2 * (np.maximum(A2, 0) > 0)
+        grads['W1'] = np.dot(X.T, dZ2) + reg * 2 * W1
+        grads['b1'] = dZ2.sum(axis=0)
         
         #############################################################################
         #                              END OF YOUR CODE                             #
@@ -158,7 +179,11 @@ class ThreeLayerNet(object):
             # TODO: Create a random minibatch of training data and labels, storing  #
             # them in X_batch and y_batch respectively.                             #
             #########################################################################
-         
+
+            p = np.random.choice(num_train, batch_size)
+            #ps = p[0: max(batch_size, len(p))]
+            X_batch = X[p, :]
+            y_batch = y[p]
         
             #########################################################################
             #                             END OF YOUR CODE                          #
@@ -175,7 +200,11 @@ class ThreeLayerNet(object):
             # using stochastic gradient descent. You'll need to use the gradients   #
             # stored in the grads dictionary defined above.                         #
             #########################################################################
-           
+
+            self.params['W1'] -= learning_rate * grads['W1']
+            self.params['W2'] -= learning_rate * grads['W2']
+            self.params['b1'] -= learning_rate * grads['b1']
+            self.params['b2'] -= learning_rate * grads['b2']
         
             #########################################################################
             #                             END OF YOUR CODE                          #
@@ -222,7 +251,16 @@ class ThreeLayerNet(object):
         # TASK 4c
         # TODO: Implement this function; it should be VERY simple!                #
         ###########################################################################
-  
+
+        W1 = self.params['W1']
+        W2 = self.params['W2']
+        b1 = self.params['b1']
+        b2 = self.params['b2']
+
+        Z2 = np.dot(X, W1) + b1
+        A2 = np.maximum(Z2, np.zeros_like(Z2))
+        scores = np.dot(A2, W2) + b2
+        y_pred = np.argmax(scores, axis=1)
 
         ###########################################################################
         #                              END OF YOUR CODE                           #
