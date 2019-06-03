@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e50edc5-476c-4d42-b2e7-3af3bb067dd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../04/ex04-solutions.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/ex06_conv_layer.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/ex06_dropout_layer.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/utils/data_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/utils/fc_net.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/utils/gradient_check.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/utils/layer_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/utils/layers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/utils/optim.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06/utils/solver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ex5.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/ex5.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fc_net.py" beforeDir="false" afterPath="$PROJECT_DIR$/fc_net.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layer_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/layer_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/optim.py" beforeDir="false" afterPath="$PROJECT_DIR$/optim.py" afterDir="false" />
-    </list>
+    <list default="true" id="6e50edc5-476c-4d42-b2e7-3af3bb067dd6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ex5.ipynb">
           <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
@@ -74,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/solver.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
@@ -102,10 +85,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1672" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1696" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -159,15 +142,15 @@
       <updated>1559396522215</updated>
       <workItem from="1559396523695" duration="170000" />
       <workItem from="1559520858783" duration="3032000" />
-      <workItem from="1559524006645" duration="7122000" />
+      <workItem from="1559524006645" duration="7814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10324000" />
+    <option name="totallyTimeSpent" value="11016000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.11674817" />
@@ -334,9 +317,6 @@
     <entry file="file://$PROJECT_DIR$/desktop.ini">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ex5.ipynb">
-      <provider selected="true" editor-type-id="jupyter-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/fc_net.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -380,6 +360,9 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ex5.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
   </component>
 </project>
