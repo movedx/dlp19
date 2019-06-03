@@ -17,7 +17,10 @@ def affine_relu_forward(x, w, b):
     # TODO: Implement the affine_relu forward pass                            #
     ###########################################################################
 
-    
+    a, fc_cache = affine_forward(x, w, b)
+    out, relu_cache = relu_forward(a)
+    cache = (fc_cache, relu_cache)
+
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
@@ -33,7 +36,10 @@ def affine_relu_backward(dout, cache):
     # TODO: Implement the affine_relu backwar pass                            #
     ###########################################################################
 
-    
+    fc_cache, relu_cache = cache
+    da = relu_backward(dout, relu_cache)
+    dx, dw, db = affine_backward(da, fc_cache)
+
     ###########################################################################
     #                             END OF YOUR CODE                            #
     ###########################################################################
